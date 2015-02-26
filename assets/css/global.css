@@ -1,0 +1,429 @@
+@import url(reset.css);
+@import url(sweet-alert.css);
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #333333; }
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif; }
+
+a {
+  color: black; }
+
+img {
+  max-width: 100%; }
+
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #333333; }
+
+.container {
+  position: relative;
+  max-width: 1025px;
+  min-height: 750px;
+  margin: 0 auto; }
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.button {
+  display: inline-block;
+  font-size: 0.8em;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+  padding: 17px 20px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease; }
+  .button:hover {
+    background-color: #333333; }
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  z-index: 9999;
+  background: white; }
+  #header h1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px; }
+  #header h1 a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 9999; }
+  #header a {
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+    #header a:hover {
+      color: red; }
+  #header #logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 21px 0 0 60px;
+    font-size: 1.8em;
+    font-family: 'Leckerli One', sans-serif; }
+  #header #main-menu {
+    position: absolute;
+    top: 30px;
+    right: 240px;
+    text-align: right;
+    -webkit-transition: right 0.4s ease;
+    -moz-transition: right 0.4s ease;
+    -ms-transition: right 0.4s ease;
+    -o-transition: right 0.4s ease;
+    transition: right 0.4s ease; }
+    #header #main-menu .menu-item {
+      font-size: 0.7em;
+      font-family: 'Montserrat', sans-serif;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      vertical-align: top; }
+    #header #main-menu.clicked {
+      right: 440px; }
+  #header .social-media {
+    position: absolute;
+    top: 13px;
+    right: 115px;
+    -webkit-transition: right 0.4s ease;
+    -moz-transition: right 0.4s ease;
+    -ms-transition: right 0.4s ease;
+    -o-transition: right 0.4s ease;
+    transition: right 0.4s ease; }
+    #header .social-media i {
+      font-size: 1.4em;
+      padding: 10px 7px; }
+    #header .social-media.clicked {
+      right: 315px; }
+  #header #search {
+    position: absolute;
+    top: 13px;
+    right: 50px; }
+    #header #search i {
+      font-size: 1.4em; }
+  #header #search {
+    position: absolute;
+    top: 13px;
+    right: 50px; }
+    #header #search ::-webkit-input-placeholder {
+      color: black;
+      font-family: 'Montserrat'; }
+    #header #search ::-moz-placeholder {
+      color: black;
+      font-family: 'Montserrat'; }
+    #header #search :-moz-placeholder {
+      color: black;
+      font-family: 'Montserrat'; }
+    #header #search :-ms-input-placeholder {
+      color: black;
+      font-family: 'Montserrat'; }
+    #header #search input[type=text] {
+      width: 0;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid black;
+      margin-right: 7px;
+      color: black;
+      font-size: 1em;
+      padding: 4px 0;
+      font-family: 'Montserrat', 'Open Sans', sans-serif;
+      transition: width 0.4s ease; }
+    #header #search.clicked input[type=text] {
+      width: 200px; }
+    #header #search i {
+      color: black;
+      font-size: 1.3em;
+      cursor: pointer;
+      padding: 10px 7px; }
+    #header #search input[type="submit"] {
+      display: none; }
+
+#footer {
+  background-color: #f6f6f6;
+  padding: 50px 0;
+  color: #666666; }
+  #footer .footer-msg {
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+    padding-bottom: 25px;
+    text-transform: uppercase; }
+  #footer .social-media {
+    text-align: center;
+    font-size: 1.3em; }
+    #footer .social-media i {
+      padding: 4px;
+      color: #666666; }
+
+/* HOME TEMPLATE */
+#hero {
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 500px; }
+  #hero img {
+    min-width: 100%;
+    height: auto;
+    pointer-events: none; }
+  #hero .text-area {
+    position: absolute;
+    top: 45%;
+    left: 26%;
+    color: white;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    #hero .text-area .hero-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 7em;
+      padding-bottom: 10px;
+      color: #fdc638; }
+    #hero .text-area .hero-subtitle {
+      font-size: 2.2em; }
+
+.recipe-list:after {
+  content: "";
+  display: table;
+  clear: both; }
+.recipe-list h1 {
+  font-size: 1.6em;
+  text-align: center;
+  padding: 35px 0;
+  color: black; }
+.recipe-list .thumbnail {
+  float: left;
+  width: 31%;
+  padding: 0 1% 50px;
+  overflow: hidden; }
+  .recipe-list .thumbnail .thumbnail-pic {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-size: cover; }
+  .recipe-list .thumbnail h3 {
+    font-size: 1em;
+    padding: 10px 0 20px;
+    color: black; }
+  .recipe-list .thumbnail .read-more {
+    display: inline-block;
+    font-size: 0.8em;
+    padding-top: 20px;
+    color: red; }
+.recipe-list .button {
+  position: relative;
+  left: 50%;
+  margin-bottom: 70px;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0); }
+
+/* RECIPE TEMPLATE */
+.single #header {
+  position: absolute;
+  background: transparent;
+  color: white; }
+  .single #header #search ::-webkit-input-placeholder {
+    color: white;
+    font-family: 'Montserrat'; }
+  .single #header #search ::-moz-placeholder {
+    color: white;
+    font-family: 'Montserrat'; }
+  .single #header #search :-moz-placeholder {
+    color: white;
+    font-family: 'Montserrat'; }
+  .single #header #search :-ms-input-placeholder {
+    color: white;
+    font-family: 'Montserrat'; }
+  .single #header a, .single #header #search i {
+    color: white; }
+  .single #header #search input[type=text] {
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid white; }
+.single .container {
+  max-width: 750px; }
+
+.article-hero {
+  background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px; }
+
+.single-title {
+  font-size: 3.5em;
+  font-family: 'Leckerli One', sans-serif;
+  text-align: center;
+  padding: 40px 0;
+  line-height: 1.2; }
+
+.article-date {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 40px; }
+
+.article-intro {
+  font-size: 1.1em;
+  padding-bottom: 60px;
+  line-height: 1.8; }
+
+.recipe {
+  box-shadow: 0 0 8px #ccc;
+  border: 1px solid #ddd;
+  margin: 0 auto 60px;
+  padding: 40px 30px; }
+  .recipe .recipe-thumbnail {
+    float: right;
+    width: 150px;
+    height: auto; }
+  .recipe h2 {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    max-width: 450px;
+    line-height: 1.4; }
+  .recipe p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: black; }
+  .recipe .servings {
+    display: inline-block;
+    font-style: italic; }
+  .recipe .ingredients {
+    margin: 30px 0 30px 15px; }
+  .recipe .ingredient {
+    padding: 7px 25px;
+    border-left: 4px solid #f1f1f1;
+    font-size: 0.7em;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    text-transform: uppercase; }
+
+#disqus_thread {
+  margin-bottom: 40px; }
+
+/* RECIPES TEMPLATE */
+.recipes-header {
+  text-align: center;
+  font-size: 1.4em;
+  text-transform: capitalize;
+  padding: 50px 0;
+  color: black;
+  border-top: 1px solid #eee; }
+
+/* ABOUT TEMPLATE */
+#about .container {
+  max-width: 800px; }
+#about h1 {
+  font-size: 3em;
+  font-family: 'Leckerli One', sans-serif;
+  padding: 40px 0;
+  text-align: center; }
+#about p {
+  font-size: 1em;
+  padding-bottom: 15px; }
+  #about p a {
+    font-weight: 400;
+    color: red; }
+    #about p a:hover {
+      border-bottom: 1px solid red; }
+#about .button {
+  position: relative;
+  left: 50%;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+  margin-bottom: 80px; }
+
+/* CONTACT TEMPLATE */
+#contact #hero {
+  background-position: 0 -175px;
+  background-repeat: no-repeat; }
+#contact h1 {
+  font-size: 3em;
+  font-family: 'Leckerli One', sans-serif;
+  padding: 40px 0;
+  text-align: center; }
+#contact .container {
+  max-width: 900px; }
+
+#contact-form {
+  text-align: center;
+  margin: 20px 0 100px; }
+  #contact-form ::-webkit-input-placeholder {
+    color: #333333;
+    font-family: 'Montserrat'; }
+  #contact-form ::-moz-placeholder {
+    color: #333333;
+    font-family: 'Montserrat'; }
+  #contact-form :-moz-placeholder {
+    color: #333333;
+    font-family: 'Montserrat'; }
+  #contact-form :-ms-input-placeholder {
+    color: #333333;
+    font-family: 'Montserrat'; }
+  #contact-form input[type=text], #contact-form input[type=email] {
+    width: 28%;
+    margin: 0 1%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #1a1a1a;
+    padding: 8px 10px;
+    font-size: 1.4em;
+    font-family: 'Montserrat'; }
+  #contact-form textarea {
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin: 50px 1% 100px;
+    outline: none;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 1.4em;
+    font-family: 'Montserrat'; }
+  #contact-form .button {
+    border: none; }
+
+/* SEARCH TEMPLATE */
+.no-results {
+  text-align: center;
+  font-size: 2em;
+  padding: 250px 0 30px; }
+
+.recipes-cta {
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 250px; }
+  .recipes-cta a {
+    color: red; }
+    .recipes-cta a:hover {
+      border-bottom: 1px solid red; }
+
+/*# sourceMappingURL=global.css.map */

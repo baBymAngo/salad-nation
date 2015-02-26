@@ -1,0 +1,13 @@
+Title: Home
+
+----
+
+Herotitle: Recipes
+
+----
+
+Herosubtitle: With Style.
+
+----
+
+Featuredrecipestitle: Finger lickin' good
